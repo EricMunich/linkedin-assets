@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1080px; height:1350px; }
+  body {
+    background:linear-gradient(180deg,#F0F2F5 0%,#E6E9ED 55%,#DADFE5 100%);
+    font-family:"DejaVu Sans", sans-serif;
+    color:#16202E;
+    padding:72px 68px 58px 68px;
+    position:relative; overflow:hidden;
+  }
+  .glow { position:absolute; width:900px; height:700px; border-radius:50%;
+    background:radial-gradient(circle, rgba(240,169,59,0.30) 0%, rgba(240,169,59,0) 68%);
+    bottom:-420px; left:90px; }
+  .inner { position:relative; z-index:2; display:flex; flex-direction:column; height:100%; }
+
+  .kicker { font-size:19px; font-weight:bold; letter-spacing:3px; color:#07695E;
+    text-transform:uppercase; margin-bottom:26px; }
+  h1 { font-size:62px; line-height:1.09; font-weight:bold; letter-spacing:-1.4px; color:#16202E; }
+  h1 .dim { color:#5B6B7E; }
+  .rule { height:5px; width:130px; margin:32px 0 34px 0;
+    background:linear-gradient(90deg,#07695E 0%,#07695E 50%,#F0A93B 50%,#F0A93B 100%); }
+
+  .lead { font-size:23px; line-height:1.45; color:#3C4A5C; margin-bottom:34px; }
+  .lead b { color:#16202E; }
+
+  .bars { display:flex; flex-direction:column; gap:24px; }
+  .barrow .top { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:10px; }
+  .barrow .lbl { font-size:24px; color:#3C4A5C; }
+  .barrow .num { font-size:44px; font-weight:bold; letter-spacing:-1.2px; line-height:1; color:#3C4A5C; }
+  .barrow.hi .lbl { color:#16202E; font-weight:bold; }
+  .barrow.hi .num { font-size:64px; color:#07695E; }
+  .track { height:24px; background:#C6CED8; border-radius:12px; overflow:hidden; }
+  .fill { height:100%; border-radius:12px; background:#8A97A8; }
+  .barrow.hi .fill { background:#07695E; }
+
+  .quote { margin-top:46px; padding-left:26px; border-left:5px solid #F0A93B; }
+  .quote .q { font-size:32px; line-height:1.34; font-weight:bold; color:#16202E; letter-spacing:-0.4px; }
+  .quote .qs { margin-top:16px; font-size:20px; line-height:1.45; color:#3C4A5C; }
+
+  .strip { margin-top:46px; display:flex; gap:14px; }
+  .chip { flex:1; background:#FBFCFD; border:1px solid #C0C9D3; border-radius:14px; padding:20px 22px; }
+  .chip.amber { background:#F0A93B; border-color:#F0A93B; }
+  .chip .t { font-size:15px; font-weight:bold; letter-spacing:1.6px; text-transform:uppercase;
+    color:#8A550B; margin-bottom:10px; }
+  .chip.amber .t { color:#16202E; }
+  .chip .v { font-size:52px; font-weight:bold; line-height:1; letter-spacing:-1.5px; color:#16202E; margin-bottom:10px; }
+  .chip .s { font-size:17px; color:#3C4A5C; line-height:1.32; }
+  .chip.amber .s { color:#16202E; }
+
+  .foot { margin-top:auto; padding-top:24px; border-top:1px solid #C0C9D3;
+    display:flex; justify-content:space-between; align-items:flex-end; gap:26px; }
+  .foot .src { font-size:15.5px; color:#5B6B7E; line-height:1.5; }
+  .foot .src b { color:#3C4A5C; font-weight:bold; }
+  .foot .who { font-size:19px; font-weight:bold; color:#16202E; text-align:right; white-space:nowrap; }
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="inner">
+
+  <div class="kicker">ifo Konjunkturprognose · Herbst 2026 · 03.09.2026</div>
+
+  <h1>Die Prognose steigt.<br><span class="dim">Die Kurve fällt.</span></h1>
+  <div class="rule"></div>
+
+  <div class="lead">Reales Bruttoinlandsprodukt, <b>Veränderung gegenüber dem Vorjahr</b></div>
+
+  <div class="bars">
+    <div class="barrow">
+      <div class="top"><div class="lbl">2026</div><div class="num">1,4 %</div></div>
+      <div class="track"><div class="fill" style="width:100%"></div></div>
+    </div>
+    <div class="barrow">
+      <div class="top"><div class="lbl">2027</div><div class="num">1,2 %</div></div>
+      <div class="track"><div class="fill" style="width:85.7%"></div></div>
+    </div>
+    <div class="barrow hi">
+      <div class="top"><div class="lbl">2028</div><div class="num">0,8 %</div></div>
+      <div class="track"><div class="fill" style="width:57.1%"></div></div>
+    </div>
+  </div>
+
+  <div class="quote">
+    <div class="q">Dieser Aufschwung ist gekauft.</div>
+    <div class="qs">Solange die Mehrausgaben laufen, trägt die Konjunktur. Wer bis 2028 plant,<br>rechnet besser mit der 0,8 als mit der 1,4.</div>
+  </div>
+
+  <div class="strip">
+    <div class="chip amber">
+      <div class="t">Defizit 2028</div>
+      <div class="v">4,6 %</div>
+      <div class="s">des BIP, nach 4,0 Prozent in diesem Jahr</div>
+    </div>
+    <div class="chip">
+      <div class="t">Schuldenstand 2028</div>
+      <div class="v">67,9 %</div>
+      <div class="s">des BIP</div>
+    </div>
+    <div class="chip">
+      <div class="t">Impuls 2026</div>
+      <div class="v">40 Mrd.</div>
+      <div class="s">Euro finanzpolitische Impulse allein in diesem Jahr</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div class="src">
+      Quelle: <b>ifo Institut, Konjunkturprognose Herbst 2026</b>, 03.09.2026 ·<br>
+      „Erholungskräfte gewinnen Oberhand“
+    </div>
+    <div class="who">Eric Knape</div>
+  </div>
+
+</div>
+</body>
+</html>
