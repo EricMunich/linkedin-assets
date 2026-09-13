@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1080px; height:1350px; }
+  body {
+    background:linear-gradient(180deg,#F0F2F5 0%,#E6E9ED 55%,#DADFE5 100%);
+    font-family:"DejaVu Sans", sans-serif;
+    color:#16202E;
+    padding:72px 68px 58px 68px;
+    position:relative; overflow:hidden;
+  }
+  .glow { position:absolute; width:900px; height:700px; border-radius:50%;
+    background:radial-gradient(circle, rgba(240,169,59,0.30) 0%, rgba(240,169,59,0) 68%);
+    bottom:-420px; left:90px; }
+  .inner { position:relative; z-index:2; display:flex; flex-direction:column; height:100%; }
+
+  .kicker { font-size:19px; font-weight:bold; letter-spacing:3px; color:#07695E;
+    text-transform:uppercase; margin-bottom:26px; }
+  h1 { font-size:62px; line-height:1.09; font-weight:bold; letter-spacing:-1.4px; color:#16202E; }
+  h1 .dim { color:#5B6B7E; }
+  .rule { height:5px; width:130px; margin:32px 0 34px 0;
+    background:linear-gradient(90deg,#07695E 0%,#07695E 50%,#F0A93B 50%,#F0A93B 100%); }
+
+  .lead { font-size:23px; line-height:1.45; color:#3C4A5C; margin-bottom:34px; }
+  .lead b { color:#16202E; }
+
+  .bars { display:flex; flex-direction:column; gap:28px; }
+  .barrow .top { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:10px; }
+  .barrow .lbl { font-size:24px; color:#3C4A5C; max-width:700px; line-height:1.3; }
+  .barrow .num { font-size:44px; font-weight:bold; letter-spacing:-1.2px; line-height:1; color:#3C4A5C; }
+  .barrow.hi .lbl { color:#16202E; font-weight:bold; }
+  .barrow.hi .num { font-size:54px; color:#07695E; }
+  .track { height:24px; background:#C6CED8; border-radius:12px; overflow:hidden; }
+  .fill { height:100%; border-radius:12px; background:#8A97A8; }
+  .barrow.hi .fill { background:#07695E; }
+
+  .quote { margin-top:46px; padding-left:26px; border-left:5px solid #F0A93B; }
+  .quote .q { font-size:32px; line-height:1.34; font-weight:bold; color:#16202E; letter-spacing:-0.4px; }
+  .quote .qs { margin-top:16px; font-size:20px; line-height:1.45; color:#3C4A5C; }
+
+  .strip { margin-top:44px; display:flex; gap:14px; }
+  .chip { flex:1; background:#FBFCFD; border:1px solid #C0C9D3; border-radius:14px; padding:20px 22px; }
+  .chip.amber { background:#F0A93B; border-color:#F0A93B; }
+  .chip .t { font-size:15px; font-weight:bold; letter-spacing:1.6px; text-transform:uppercase;
+    color:#8A550B; margin-bottom:10px; }
+  .chip.amber .t { color:#16202E; }
+  .chip .v { font-size:46px; font-weight:bold; line-height:1; letter-spacing:-1.5px; color:#16202E; margin-bottom:10px; }
+  .chip .s { font-size:17px; color:#3C4A5C; line-height:1.32; }
+  .chip.amber .s { color:#16202E; }
+
+  .foot { margin-top:auto; padding-top:24px; border-top:1px solid #C0C9D3;
+    display:flex; justify-content:space-between; align-items:flex-end; gap:26px; }
+  .foot .src { font-size:15.5px; color:#5B6B7E; line-height:1.5; }
+  .foot .src b { color:#3C4A5C; font-weight:bold; }
+  .foot .who { font-size:19px; font-weight:bold; color:#16202E; text-align:right; white-space:nowrap; }
+</style>
+</head>
+<body>
+<div class="glow"></div>
+<div class="inner">
+
+  <div class="kicker">Ladeinfrastruktur · Bundesnetzagentur · Stichtag 01.08.2026</div>
+
+  <h1>Ein Viertel der Ladepunkte<br>trägt mindestens<br><span class="dim">zwei Drittel der Leistung.</span></h1>
+  <div class="rule"></div>
+
+  <div class="lead">Schnellladepunkte über 22 kW, <b>Anteil an allen Ladepunkten und an den 9,22 GW Ladeleistung</b></div>
+
+  <div class="bars">
+    <div class="barrow">
+      <div class="top"><div class="lbl">Anteil an den Ladepunkten</div><div class="num">26,2 %</div></div>
+      <div class="track"><div class="fill" style="width:26.2%"></div></div>
+    </div>
+    <div class="barrow hi">
+      <div class="top"><div class="lbl">Anteil an der Ladeleistung</div><div class="num">mind. 62,7 %</div></div>
+      <div class="track"><div class="fill" style="width:62.7%"></div></div>
+    </div>
+  </div>
+
+  <div class="quote">
+    <div class="q">Die Anzahl ist gut zählbar.<br>Den Engpass erklärt sie nicht.</div>
+    <div class="qs">Selbst wenn jeder Normallader die vollen 22 kW brächte, kämen alle zusammen<br>auf 3,44 GW. Der Rest hängt an den Schnellladern.</div>
+  </div>
+
+  <div class="strip">
+    <div class="chip amber">
+      <div class="t">Ladepunkte gesamt</div>
+      <div class="v">212.064</div>
+      <div class="s">öffentlich zugänglich, Stichtag 1. August 2026</div>
+    </div>
+    <div class="chip">
+      <div class="t">Normallader</div>
+      <div class="v">156.399</div>
+      <div class="s">bis 22 kW</div>
+    </div>
+    <div class="chip">
+      <div class="t">Schnelllader</div>
+      <div class="v">55.665</div>
+      <div class="s">über 22 kW</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div class="src">
+      Quelle: <b>Bundesnetzagentur, Ladeinfrastruktur in Deutschland</b>, Stichtag 01.08.2026 ·<br>
+      Leistungsanteile eigene Berechnung aus den gemeldeten Werten
+    </div>
+    <div class="who">Eric Knape</div>
+  </div>
+
+</div>
+</body>
+</html>
